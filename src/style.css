@@ -45,3 +45,8 @@ ul {
   margin: 20px auto;
   border-radius: 10px;
 }
+
+.footer {
+  text-align: center;
+  font-family: monospace;
+}
