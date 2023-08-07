@@ -29,6 +29,10 @@ p {
 .today-data {
   padding: 20px;
 }
+#today-icon {
+  display: block;
+  margin: 0 auto;
+}
 
 ul {
   list-style: none;

@@ -29,13 +29,19 @@ date.innerHTML = formatDate(now);
 
 //Search new city button and functions
 function displayWeatherResult(response) {
-  console.log(response);
   document.querySelector("#city").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.temperature.current
   );
   document.querySelector("#conditions").innerHTML =
     response.data.condition.description;
+  //document.querySelector("#date-today").innerHTML = formatDate(response.data.time * 1000);
+  let iconElement = document.querySelector("#today-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
+  iconElement.setAttribute("alt", response.data.condition.description);
 }
 
 function search(city) {
